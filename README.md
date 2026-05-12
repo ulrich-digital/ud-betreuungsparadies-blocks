@@ -31,7 +31,6 @@ Karten-Block für kompakte Inhaltsbereiche mit Text, Medien und optionalen weite
 - unterstützt wählbare Hintergrundverläufe
 - kann bei Bedarf eine eigene Kartenbreite erhalten
 
-
 ### Card Chips
 
 ![alt text](assets/chips.webp)
@@ -52,6 +51,14 @@ Block-Kombination für einen oder mehrere Buttons innerhalb von Karten.
 - der Container ordnet Buttons horizontal oder vertikal an
 - einzelne Buttons unterstützen Seite/URL, Datei/PDF, E-Mail und Telefon
 - Button-Stil kann zwischen gefüllt und Kontur gewählt werden
+
+### Info-Liste
+![alt text](assets/info_liste.webp)
+Block für kurze, strukturierte Informationszeilen innerhalb von Karten oder Inhaltsbereichen.
+
+- kombiniert eine Bezeichnung mit einem zugehörigen Wert
+- eignet sich für Angaben wie Öffnungszeiten, Standort, Alter oder Kontaktinformationen
+- unterstützt eine zweigeteilte oder gestapelte Darstellung
 
 
 ## Technische Grundlage
