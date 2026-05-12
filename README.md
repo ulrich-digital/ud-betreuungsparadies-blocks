@@ -19,8 +19,15 @@ Enthalten sind unter anderem Blöcke für:
 - Team-Loop
 - Bildslider
 
-![alt text](assets/content_block.webp)
 
+![alt text](assets/container_fuer_karten.png)
+*Der Karten-Container steuert die Breiten der Karten und das Layout*
+
+![alt text](assets/content_block.webp)
+*Die Inhaltskarte kann verschiedene Farben annehmen*
+
+![alt text](assets/chips.webp)
+*Die Chips können verschiedene Status annehmen*
 ## Technische Grundlage
 
 Das Plugin ist als WordPress-Block-Plugin aufgebaut und verwendet:
