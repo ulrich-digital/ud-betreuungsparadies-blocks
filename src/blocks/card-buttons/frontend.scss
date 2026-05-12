@@ -1,0 +1,74 @@
+/* =============================================================== *\
+   Card-Buttons
+\* =============================================================== */
+
+.ud-card-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 0;
+	margin-bottom: 1rem;
+
+	&.ud-card-buttons--horizontal {
+		flex-direction: row;
+
+		&.is-content-justification-left {
+			justify-content: flex-start;
+		}
+
+		&.is-content-justification-center {
+			justify-content: center;
+		}
+
+		&.is-content-justification-right {
+			justify-content: flex-end;
+		}
+	}
+
+	&.ud-card-buttons--vertical {
+		flex-direction: column;
+
+		&.is-content-justification-left {
+			align-items: flex-start;
+		}
+
+		&.is-content-justification-center {
+			align-items: center;
+		}
+
+		&.is-content-justification-right {
+			align-items: flex-end;
+		}
+	}
+}
+
+.ud-betreuungsparadies-card {
+	.ud-card-buttons {
+		margin-bottom: 0;
+	}
+}
+
+.ud-card-button__link {
+	display: inline-flex;
+	align-items: center;
+	border-radius: var(--ud-card-border-radius-200);
+	padding: 5px 10px;
+	font-weight: 600;
+	text-decoration: none;
+	transition:
+		transform 0.15s ease,
+		background-color 0.15s ease;
+
+	&::before,
+	&::after {
+		display: inline-block;
+		font-family: "Font Awesome 7 Pro";
+		font-weight: 900;
+		transition: transform 0.15s ease;
+		font-size: 0.9rem;
+	}
+
+	&:hover {
+		transform: translateY(-1px);
+	}
+}

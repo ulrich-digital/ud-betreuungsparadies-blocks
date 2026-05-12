@@ -1,0 +1,124 @@
+/* =============================================================== *\
+   Grid
+\* =============================================================== */
+
+/* Grundlayout und Abstände */
+.ud-card-grid {
+	width: 100%;
+	margin-top: var(--ud-space-300);
+	margin-bottom: var(--ud-space-300);
+
+	figure,
+	img {
+		max-width: 100%;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+/* Layout: Kartenbreite */
+.ud-card-grid:not(.ud-card-grid--columns):not(.ud-card-grid--masonry) {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	gap: var(--ud-space-400);
+
+	> * {
+		flex: 0 0
+			var(--ud-content-card-width, var(--ud-card-grid-min-width, 360px));
+		width: var(
+			--ud-content-card-width,
+			var(--ud-card-grid-min-width, 360px)
+		);
+		max-width: 100%;
+		min-width: 0;
+	}
+}
+
+/* Ausrichtung im Kartenbreiten-Layout */
+.ud-card-grid.ud-card-grid--align-stretch:not(.ud-card-grid--columns):not(
+		.ud-card-grid--masonry
+	) {
+	align-items: stretch;
+
+	> * {
+		display: flex;
+		align-self: stretch;
+	}
+
+	> .ud-betreuungsparadies-card {
+		height: auto;
+	}
+
+	> * > .ud-betreuungsparadies-card {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.ud-card-grid.ud-card-grid--align-start:not(.ud-card-grid--columns):not(
+		.ud-card-grid--masonry
+	) {
+	align-items: flex-start;
+}
+
+/* Layout: Spaltenanzahl */
+.ud-card-grid.ud-card-grid--columns {
+	display: grid;
+	grid-template-columns: repeat(
+		var(--ud-card-grid-columns, 2),
+		minmax(0, 1fr)
+	);
+	gap: var(--ud-space-400);
+	padding: 0 60px;
+
+	> * {
+		width: 100%;
+		max-width: 100%;
+		min-width: 0;
+	}
+
+	&.ud-card-grid--align-stretch {
+		align-items: stretch;
+	}
+
+	&.ud-card-grid--align-start {
+		align-items: start;
+	}
+}
+
+/* Layout: Masonry */
+.ud-card-grid.ud-card-grid--masonry {
+	position: relative;
+	display: block;
+	max-width: 100%;
+
+	&.alignfull {
+		max-width: 100% !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	> * {
+		width: var(--ud-card-grid-min-width, 360px);
+		max-width: 100%;
+		min-width: 0;
+		//transition: transform 0.2s ease;
+	}
+	&.is-masonry-ready > * {
+		transition: transform 0.18s ease;
+	}
+}
+
+/* Responsive Anpassungen */
+@media screen and (max-width: 800px) {
+	.ud-card-grid.ud-card-grid--columns {
+		grid-template-columns: 1fr;
+		padding: 30px;
+	}
+}

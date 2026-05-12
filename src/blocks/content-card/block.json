@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/content-card",
+    "title": "Inhalts-Karte",
+    "category": "design",
+    "icon": "text-page",
+    "description": "Einfache Inhaltskarte mit Titel, Text und optionalem Button.",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "gradient": {
+            "type": "string",
+            "default": ""
+        },
+        "cardWidth": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "editorScript": "file:./editor-script.js"
+}

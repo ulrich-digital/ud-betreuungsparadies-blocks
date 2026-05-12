@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/card-grid",
+    "title": "Container für Karten",
+    "category": "design",
+    "icon": "grid-view",
+    "description": "Container für Inhalts-Karten, Bilder-Slider, Team-Loop und offene Stellen",
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        },
+        "layoutMode": {
+            "type": "string",
+            "default": "cardWidth"
+        },
+        "columns": {
+            "type": "number",
+            "default": 2
+        },
+        "cardWidth": {
+            "type": "string",
+            "default": "360px"
+        },
+        "cardAlignment": {
+            "type": "string",
+            "default": "stretch"
+        }
+    },
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "html": false
+    },
+    "editorScript": "file:./editor-script.js",
+    "script": "file:./frontend-script.js"
+}

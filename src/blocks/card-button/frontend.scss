@@ -1,0 +1,84 @@
+.ud-card-button {
+	/* =========================================================== */
+	/* Default (ausserhalb Card)                                   */
+	/* =========================================================== */
+
+	&--style-filled {
+		.ud-card-button__link {
+			background-color: var(--ud-highlight-200, #ffffff);
+			border-bottom: 0 !important;
+			box-shadow: var(--ud-box-shadow);
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.9);
+			}
+		}
+	}
+
+	&--style-outline {
+		.ud-card-button__link {
+			background-color: transparent;
+			border: 1px solid var(--ud-highlight-200, #fff);
+			color: var(--ud-highlight-200, #ffffff);
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+		}
+	}
+
+	// Override innerhalb Card
+	.ud-betreuungsparadies-card & {
+		&--style-filled {
+			.ud-card-button__link {
+				background-color: #00000029;
+				box-shadow: none;
+				&:hover {
+					background-color: #00000033;
+				}
+			}
+		}
+
+		&--style-outline {
+			.ud-card-button__link {
+				border: 1px solid currentColor;
+				color: inherit;
+				&:hover {
+					background-color: #0000000f;
+				}
+			}
+		}
+	}
+
+	// Typen (Icons)
+	&--internal {
+		.ud-card-button__link {
+			&::after {
+				margin-left: 0.45em;
+				content: "\f061";
+			}
+
+			&:hover::after {
+				transform: translateX(2px);
+			}
+		}
+	}
+
+	&--external .ud-card-button__link::before {
+		margin-right: 0.45em;
+		content: "\f08e";
+	}
+
+	&--email .ud-card-button__link::before {
+		margin-right: 0.45em;
+		content: "\f1d8";
+	}
+
+	&--phone .ud-card-button__link::before {
+		margin-right: 0.45em;
+		content: "\f095";
+	}
+
+	&--document .ud-card-button__link::before {
+		margin-right: 0.45em;
+		content: "\f15c";
+	}
+}

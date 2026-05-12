@@ -1,0 +1,32 @@
+.ud-offene-stellen-button {
+	--ud-offene-stellen-button-size: 110px;
+	position: absolute;
+    top: -150px;
+    left: auto;
+    right: 40px;
+	z-index: 2;
+
+	@media screen and (max-width: 600px) {
+        --ud-offene-stellen-button-size: 100px;
+        top: -130px;
+		right: 40px;
+	}
+	.ud-card-button__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2px;
+		width: var(--ud-offene-stellen-button-size);
+		height: var(--ud-offene-stellen-button-size);
+		border-radius: 50%;
+		text-align: center;
+		white-space: normal;
+		line-height: 1.1;
+		aspect-ratio: 1 / 1;
+		gap: 0;
+		&::after {
+			display: none;
+			content: none;
+		}
+	}
+}

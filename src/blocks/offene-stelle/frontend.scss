@@ -1,0 +1,11 @@
+.ud-offene-stelle {
+	width: 100%;
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}

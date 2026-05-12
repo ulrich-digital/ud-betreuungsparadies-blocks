@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ud-betreuungsparadies/offene-stelle",
+	"title": "Offene Stelle",
+	"category": "design",
+	"icon": "id",
+	"description": "Block für eine publizierbare offene Stelle mit frei bearbeitbaren Standard-Blöcken.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"isActive": {
+			"type": "boolean",
+			"default": true
+		},
+		"gradient": {
+			"type": "string",
+			"default": ""
+		}
+	},
+
+	"editorScript": "file:./editor-script.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".wp-block-image.is-style-ud-scroll-reveal-image");if(!e.length)return;const t=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("is-visible"),t.unobserve(e.target))})},{threshold:.2});e.forEach(e=>{t.observe(e)})});

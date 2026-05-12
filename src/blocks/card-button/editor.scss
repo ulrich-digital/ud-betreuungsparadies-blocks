@@ -1,0 +1,78 @@
+/* =============================================================== *\
+   Editor (korrekt hier ohne editor-styles-wrapper)
+\* =============================================================== */
+.ud-card-button__link-popover {
+	padding: 16px;
+	width: 420px;
+	min-width: 320px;
+
+	.components-toggle-group-control {
+		margin-bottom: 16px;
+		width: 100%;
+	}
+
+	.components-toggle-group-control__button {
+		justify-content: center;
+		min-height: 44px;
+		width: 33.333%;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.components-base-control,
+	.block-editor-link-control,
+	.ud-card-button__media-button {
+		width: 100%;
+	}
+
+	.components-text-control__input,
+	.block-editor-link-control__search-input input,
+	.ud-card-button__media-button {
+		min-height: 44px;
+		font-size: 15px;
+	}
+
+	.ud-card-button__media-button {
+		justify-content: center;
+	}
+
+	// Popover mit URL, PDF usw.
+	.ud-card-button__link-mode-buttons {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 8px;
+		margin-bottom: 12px;
+	}
+
+	.ud-card-button__link-mode-button.components-button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 5px;
+		padding: 10px 8px;
+		height: auto;
+		min-height: 64px;
+		border-radius: 8px;
+		text-align: center;
+		white-space: normal;
+		line-height: 1.15;
+	}
+
+	.ud-card-button__link-mode-button.components-button.is-primary {
+		box-shadow: none;
+	}
+
+	.ud-card-button__link-mode-icon {
+		display: flex;
+		width: 22px;
+		height: 22px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			fill: currentColor;
+		}
+	}
+}

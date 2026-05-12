@@ -1,0 +1,61 @@
+/* =============================================================== *\
+   Grund-Konfiguration sätmlicher Cards
+\* =============================================================== */
+.ud-betreuungsparadies-card {
+	border-radius: var(--ud-card-border-radius-500);
+	padding: 20px;
+	font-size: 1rem;
+	box-shadow: var(--ud-box-shadow);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: var(--ud-space-200);
+
+	width: var(--ud-content-card-width, auto);
+	max-width: 100%;
+	box-sizing: border-box;
+
+	.wp-block-group {
+		gap: 0;
+		border: 0px solid black;
+	}
+	.wp-block-heading {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 1.125rem;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		border-radius: var(--ud-card-border-radius-200);
+		object-fit: cover;
+	}
+
+	//Gap eliminieren, wenn mehrere infolisten untereinander sind
+	.ud-info-list + .ud-info-list {
+		margin-top: calc(var(--ud-space-200) * -1);
+	}
+
+	p + p {
+		margin-top: 0;
+	}
+
+	.wp-block-list {
+		margin-top: 0;
+		margin-top: calc(var(--ud-space-200) * -1 + 0.5rem);
+		margin-bottom: 0;
+
+		li + li {
+			margin-top: 0.5rem;
+		}
+	}
+}
+.entry-content {
+	.ud-betreuungsparadies-card {
+		p + p {
+			margin-top: 0;
+		}
+	}
+}

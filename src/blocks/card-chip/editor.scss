@@ -1,0 +1,14 @@
+.editor-styles-wrapper {
+
+	// Chip
+	.ud-card-chip {
+		&.is-selected::after,
+		&.has-child-selected::after {
+			border-radius: 100px;
+		}
+		input {
+			width: auto;
+			min-width: 8rem;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/info-list",
+    "title": "Info Liste",
+    "category": "design",
+    "icon": "editor-table",
+    "description": "Container für kurze Informationszeilen.",
+    "attributes": {
+        "label": {
+            "type": "string",
+            "default": ""
+        },
+        "value": {
+            "type": "string",
+            "default": ""
+        },
+        "layout": {
+            "type": "string",
+            "default": "split"
+        }
+    },
+    "supports": {
+        "html": false
+    },
+    "editorScript": "file:./editor-script.js"
+}

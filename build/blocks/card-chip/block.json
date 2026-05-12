@@ -1,0 +1,26 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/card-chip",
+    "title": "Chip",
+    "category": "design",
+    "icon": "tag",
+    "description": "Einfacher Angebots-Chip ohne Link.",
+    "parent": [
+        "ud-betreuungsparadies/card-chips"
+    ],
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": ""
+        },
+        "isActive": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "editorScript": "file:./editor-script.js"
+}

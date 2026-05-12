@@ -1,0 +1,24 @@
+{
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/image-slider",
+    "title": "Bildslider",
+    "category": "widgets",
+    "icon": "images-alt2",
+    "description": "Bildslider für Betreuungsparadies.",
+    "textdomain": "ud-betreuungsparadies",
+    "editorScript": "file:./editor-script.js",
+    "script": "file:./frontend-script.js",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": ""
+        },
+"gradient": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false
+    }
+}

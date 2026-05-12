@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ud-betreuungsparadies/card-chips",
+	"title": "Card Chips",
+	"category": "design",
+	"icon": "tag",
+	"description": "Container für Karten-Chips.",
+	"supports": {
+		"html": false,
+		"layout": {
+			"default": {
+				"type": "flex",
+				"flexWrap": "wrap",
+				"justifyContent": "left"
+			},
+			"allowSwitching": false,
+			"allowOrientation": false,
+			"allowJustification": true
+		}
+	},
+	"editorScript": "file:./editor-script.js"
+}

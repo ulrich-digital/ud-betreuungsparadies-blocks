@@ -1,0 +1,60 @@
+.editor-styles-wrapper {
+	.ud-team-loop-editor {
+		margin: var(--ud-space-200) 0;
+		padding: var(--ud-space-100);
+		border-radius: var(--ud-card-border-radius-500);
+		background-color: hsla(0, 0%, 100%, 0.2);
+	}
+
+.ud-team-loop-editor-preview {
+		display: grid;
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(min(100%, 200px), 200px)
+		);
+		justify-content: center;
+		gap: var(--ud-space-200);
+		width: 100%;
+		margin-top: var(--ud-space-400);
+	}
+
+	.ud-team-loop__heading {
+		margin-top: var(--ud-space-400);
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	.ud-team-loop-editor-preview__item.ud-betreuungsparadies-card {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 200px;
+		padding: 0;
+		overflow: hidden;
+	}
+
+
+	.ud-team-loop-editor-preview__item {
+		.ud-card-button__link {
+			cursor: default;
+		}
+	}
+
+	.ud-team-loop-card__content {
+		padding: 0 20px 20px;
+
+		.ud-team-loop-card__title {
+			margin: 0 0 1rem;
+		}
+	}
+
+	.ud-team-loop-editor-preview__empty {
+		margin: 0;
+		padding: 0.88rem;
+		border: 1px solid var(--ud-error-700);
+		border-radius: var(--ud-card-border-radius-500);
+		background: var(--ud-error-300);
+		font-size: 1rem;
+		color: var(--ud-error-700);
+	}
+}

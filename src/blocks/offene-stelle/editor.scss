@@ -1,0 +1,18 @@
+.editor-styles-wrapper {
+	.ud-offene-stelle {
+		width: 100%;
+
+		&.is-inactive {
+			opacity: .55;
+			filter: grayscale(1);
+		}
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

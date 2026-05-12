@@ -1,0 +1,23 @@
+.block-editor-block-list__layout.is-root-container
+	> .ud-offene-stellen-button:where(
+		:not(.alignleft):not(.alignright):not(.alignfull)
+	) {
+	max-width: 200px !important;
+	margin-right: 0 !important;
+	top: -100px;
+}
+
+.editor-styles-wrapper {
+	.ud-offene-stellen-button__link-popover {
+		box-sizing: border-box;
+		padding: 12px;
+		width: 360px;
+	}
+
+	.ud-gradient-toolbar-swatch {
+		display: block;
+		width: 20px;
+		height: 20px;
+		border-radius: 999px;
+	}
+}

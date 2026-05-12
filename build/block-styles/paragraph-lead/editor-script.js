@@ -1,0 +1,1 @@
+(()=>{"use strict";(0,window.wp.blocks.registerBlockStyle)("core/paragraph",{name:"ud-lead",label:"Einstiegstext"})})();

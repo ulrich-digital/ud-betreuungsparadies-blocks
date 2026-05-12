@@ -1,0 +1,27 @@
+/* =============================================================== *\
+   Info-List
+    - für Öffnungszeiten usw.
+\* =============================================================== */
+.ud-info-list {
+	display: grid;
+	gap: 0.25rem 2rem;
+
+	p {
+		margin: 0;
+	}
+}
+
+.ud-info-list--split {
+	grid-template-columns: 1fr auto;
+}
+
+.ud-info-list--stacked {
+	grid-template-columns: 1fr;
+}
+
+@media (max-width: 480px) {
+	.ud-info-list--split {
+		grid-template-columns: 1fr;
+		gap: 0.25rem;
+	}
+}

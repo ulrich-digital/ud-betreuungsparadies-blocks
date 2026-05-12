@@ -1,0 +1,80 @@
+/* =============================================================== *\
+   Team-Hero
+\* =============================================================== */
+
+.ud-team-hero {
+	position: relative;
+	width: 100%;
+	margin-block: var(--ud-space-300);
+
+	--ud-team-quote-width: 420px;
+	--ud-team-quote-width_half: calc(var(--ud-team-quote-width) * 0.5);
+	--ud-team-quote-offset: 100px;
+
+	> .wp-block-image {
+		margin: 0;
+		width: calc(100% - (var(--ud-team-quote-width_half)));
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			border-radius: var(--ud-card-border-radius-500);
+			box-shadow: var(--ud-box-shadow);
+		}
+	}
+
+	> .wp-block-ud-betreuungsparadies-content-card.is-overlay {
+		position: absolute;
+		top: 35%;
+		left: auto;
+		z-index: 2;
+		right: 0;
+		max-width: var(--ud-team-quote-width);
+		background: var(--ud-team-hero-gradient, inherit) !important;
+		font-size: 1.5rem;
+		transform: none;
+	}
+
+	@media (max-width: 1200px) {
+		> .wp-block-image {
+			width: calc(100% - 60px);
+		}
+		> .wp-block-ud-betreuungsparadies-content-card.is-overlay {
+			top: auto;
+			right: 0rem;
+			bottom: 3rem;
+			font-size: 1.4rem;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		> .wp-block-image {
+			width: 100%;
+		}
+		> .wp-block-ud-betreuungsparadies-content-card.is-overlay {
+			position: relative;
+			font-size: 1.3rem;
+			margin-left: auto;
+			margin-right: 20px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		> .wp-block-image {
+			//width: 100%;
+position: relative;
+z-index: 3;
+		}
+		> .wp-block-ud-betreuungsparadies-content-card.is-overlay {			
+        font-size: 1.1rem;
+        width: 100%;
+        bottom: auto;
+        /* margin-top: -2rem; */
+        padding: 12px;
+        padding-top: 5rem;
+        margin-top: -4.25rem;
+
+		}
+	}
+}

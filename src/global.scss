@@ -1,0 +1,49 @@
+@use "./blocks/card-button/frontend" as *;
+@use "./blocks/card-buttons/frontend" as *;
+@use "./blocks/card-chip/frontend" as *;
+@use "./blocks/card-chips/frontend" as *;
+@use "./blocks/card-grid/frontend" as *;
+@use "./blocks/content-card/frontend" as *;
+@use "./blocks/image-slide/frontend" as *;
+@use "./blocks/image-slider/frontend" as *;
+@use "./blocks/info-list/frontend" as *;
+@use "./blocks/team/frontend" as *;
+@use "./blocks/team-hero/frontend" as *;
+@use "./blocks/team-loop/frontend" as *;
+@use "./blocks/offene-stelle/frontend" as *;
+@use "./blocks/offene-stelle-button/frontend" as *;
+
+@use "./block-styles/image-scroll-reveal/frontend" as *;
+@use "./block-styles/paragraph-lead/frontend" as *;
+
+
+:root {
+	--ud-card-border-radius-200: 6px;
+	--ud-card-border-radius-500: 20px;
+	--ud-card-border-radius-600: 32px;
+	--ud-card-border-radius-900: 999px;
+	--ud-space-100: 10px;
+	--ud-space-200: 1rem;
+	--ud-space-300: 2rem;
+	--ud-space-400: 30px;
+	--ud-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1607843137);
+	--ud-drop-shadow: var(--ud-box-shadow);
+}
+
+
+/* =============================================================== *\
+   Layout
+\* =============================================================== */
+// kleiner Text in der Card -> Stand: 01.01.2025
+p.is-style-ud-meta {
+	font-size: 0.875rem;
+	line-height: 1.3;
+}
+
+// Abstände
+.wp-block-group {
+	.ud-info-list + .ud-card-chips,
+	.ud-card-chips + .ud-info-list {
+		margin-top: var(--ud-space-100);
+	}
+}

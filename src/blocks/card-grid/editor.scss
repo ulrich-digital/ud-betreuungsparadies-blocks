@@ -1,0 +1,155 @@
+/* =============================================================== *\
+   Grid Editor
+\* =============================================================== */
+
+.editor-styles-wrapper {
+	/* Editor-Wrapper */
+	.wp-block-ud-betreuungsparadies-card-grid.ud-card-grid {
+		display: block;
+		box-sizing: border-box;
+		width: 800px;
+		max-width: calc(100% - 40px);
+		margin-right: auto;
+		margin-left: auto;
+		padding: 20px;
+		background-color: #ffffff33;
+		border-radius: var(--ud-card-border-radius-500);
+
+        &.alignwide{
+		    width: 1240px;
+        }
+
+        &.alignfull{
+        width: 100%;
+}
+
+
+		&.is-selected::after,
+		&.has-child-selected::after {
+			border-radius: var(--ud-card-border-radius-500);
+		}
+
+		/* Standardvorschau für Kartenbreiten-Layout */
+		> .ud-card-grid__inner.block-editor-block-list__layout {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			gap: var(--ud-space-400);
+			width: 100%;
+
+			> .wp-block {
+				flex: 0 0 var(
+					--ud-content-card-width,
+					var(--ud-card-grid-min-width, 360px)
+				);
+				box-sizing: border-box;
+				width: var(
+					--ud-content-card-width,
+					var(--ud-card-grid-min-width, 360px)
+				);
+				max-width: 100%;
+				min-width: 0;
+				margin: 0;
+			}
+
+			> .block-list-appender {
+				flex: 0 0 var(--ud-card-grid-min-width, 360px);
+				width: var(--ud-card-grid-min-width, 360px);
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+
+		/* Ausrichtung im Kartenbreiten-Layout */
+		&.ud-card-grid--align-stretch:not(.ud-card-grid--columns):not(.ud-card-grid--masonry) {
+			> .ud-card-grid__inner.block-editor-block-list__layout {
+				align-items: stretch;
+			}
+		}
+
+		&.ud-card-grid--align-start:not(.ud-card-grid--columns):not(.ud-card-grid--masonry) {
+			> .ud-card-grid__inner.block-editor-block-list__layout {
+				align-items: flex-start;
+			}
+		}
+
+		/* Editor-Vorschau für Spaltenlayout */
+		&.ud-card-grid--columns {
+			> .ud-card-grid__inner.block-editor-block-list__layout {
+				display: grid;
+				grid-template-columns: repeat(
+					var(--ud-card-grid-columns, 2),
+					minmax(0, 1fr)
+				);
+				justify-content: initial;
+				align-items: stretch;
+				gap: var(--ud-space-400);
+				width: 100%;
+
+				> * {
+					box-sizing: border-box;
+					width: 100%;
+					max-width: 100%;
+					min-width: 0;
+					margin: 0;
+				}
+			}
+
+			&.ud-card-grid--align-start {
+				> .ud-card-grid__inner.block-editor-block-list__layout {
+					align-items: start;
+				}
+			}
+
+			&.ud-card-grid--align-stretch {
+				> .ud-card-grid__inner.block-editor-block-list__layout {
+					align-items: stretch;
+				}
+			}
+		}
+
+		/* Editor-Vorschau für Masonry */
+		&.ud-card-grid--masonry {
+			position: relative;
+			display: block;
+			height: auto !important;
+
+			> .ud-card-grid__inner.block-editor-block-list__layout {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: flex-start;
+				gap: var(--ud-space-400);
+				width: 100%;
+
+				> .wp-block {
+					position: relative !important;
+					flex: 0 0 var(--ud-card-grid-min-width, 360px);
+					box-sizing: border-box;
+					width: var(--ud-card-grid-min-width, 360px);
+					max-width: 100%;
+					min-width: 0;
+					margin: 0;
+					transform: none !important;
+				}
+
+				> .block-list-appender {
+					flex: 0 0 var(--ud-card-grid-min-width, 360px);
+					width: var(--ud-card-grid-min-width, 360px);
+					max-width: 100%;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+/* Hinweistext in den Block-Einstellungen */
+.components-base-control__help {
+	margin-top: 8px;
+	margin-bottom: 1rem;
+	font-size: 12px;
+	font-style: normal;
+	color: rgb(117, 117, 117);
+}

@@ -1,0 +1,39 @@
+.editor-styles-wrapper {
+	// Team-Hero
+	.ud-team-hero {
+		position: relative;
+		margin-block: var(--ud-space-300);
+
+		> .block-editor-inner-blocks {
+			> .block-editor-block-list__layout {
+				position: relative;
+
+				> .wp-block-image {
+					margin: 0;
+
+					img {
+						display: block;
+						width: 100%;
+						max-width: calc(100% - 210px);
+						height: auto;
+			border-radius: var(--ud-card-border-radius-500);
+			box-shadow: var(--ud-box-shadow);
+					}
+				}
+
+				> .ud-content-card.is-overlay {
+					position: absolute;
+					top: 35%;
+					right: 0;
+					bottom: auto;
+					left: auto;
+					z-index: 2;
+					width: min(420px, 100%);
+					max-width: 420px;
+					background: var(--ud-team-hero-gradient, inherit) !important;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}

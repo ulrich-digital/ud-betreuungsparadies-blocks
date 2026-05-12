@@ -1,0 +1,28 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/offene-stellen-button",
+    "title": "Offene-Stellen-Button",
+    "category": "design",
+    "icon": "megaphone",
+    "description": "Gibt einen Button aus, wenn mindestens eine aktive offene Stelle vorhanden ist.",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Offene Stellen"
+        },
+        "url": {
+            "type": "string",
+            "default": "/offene-stellen/"
+        },
+        "gradient": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "editorScript": "file:./editor-script.js",
+    "render": "file:./render.php"
+}

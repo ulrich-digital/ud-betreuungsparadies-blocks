@@ -1,0 +1,1 @@
+(()=>{"use strict";(0,window.wp.blocks.registerBlockStyle)("core/image",{name:"ud-scroll-reveal-image",label:"Scroll-Effekt"})})();

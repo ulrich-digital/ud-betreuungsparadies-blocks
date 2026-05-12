@@ -1,0 +1,27 @@
+{
+	"apiVersion": 3,
+	"name": "ud-betreuungsparadies/image-slide",
+	"title": "Bildslide",
+	"parent": ["ud-betreuungsparadies/image-slider"],
+	"category": "widgets",
+	"icon": "format-image",
+	"description": "Ein einzelnes Bild innerhalb eines Bildsliders.",
+	"textdomain": "ud-betreuungsparadies",
+	"editorScript": "file:./editor-script.js",
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"attributes": {
+		"id": {
+			"type": "number"
+		},
+		"url": {
+			"type": "string"
+		},
+		"alt": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

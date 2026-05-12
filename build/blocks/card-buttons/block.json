@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ud-betreuungsparadies/card-buttons",
+  "title": "Card Buttons",
+  "category": "design",
+  "icon": "button",
+  "description": "Container für Karten-Buttons.",
+  "supports": {
+    "html": false,
+    "layout": {
+      "default": {
+        "type": "flex",
+        "flexWrap": "wrap",
+        "justifyContent": "left"
+      },
+      "allowSwitching": false,
+      "allowOrientation": false,
+      "allowJustification": true
+    }
+  },
+"attributes": {
+		"buttonLayout": {
+			"type": "string",
+			"default": "horizontal"
+		}
+	},
+  "editorScript": "file:./editor-script.js"
+}

@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/team-hero",
+    "title": "Team Hero",
+    "category": "design",
+    "icon": "format-image",
+    "description": "Bild mit überlagerter Content Card für Teammitglieder.",
+    "attributes": {
+        "gradient": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "editorScript": "file:./editor-script.js"
+}

@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/team-loop",
+    "title": "Team-Loop",
+    "category": "widgets",
+	"icon": "groups",
+    "description": "Gibt Teammitglieder gefiltert nach Standort und Leitungsfunktion aus.",
+    "textdomain": "betreuungsparadies-ud",
+    "supports": {
+        "html": false,
+        "align": [
+            "wide",
+            "full"
+        ]
+    },
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "default": ""
+        },
+        "standort": {
+            "type": "string",
+            "default": ""
+        },
+        "nurLeitung": {
+            "type": "boolean",
+            "default": false
+        },
+        "leitungZuerst": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "editorScript": "file:./editor-script.js",
+    "render": "file:./render.php"
+}
