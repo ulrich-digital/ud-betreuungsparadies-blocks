@@ -1,18 +1,20 @@
 # UD Blocks: Betreuungsparadies
 
-Custom Block-Plugin für die Website betreuungsparadies.ch.
+Block-Plugin für die Website betreuungsparadies.ch.
 
-Das Plugin stellt projektspezifische WordPress-Blöcke, Styles und Hilfsfunktionen für den Aufbau der Website bereit.
+Das Plugin stellt mehrere WordPress-Blöcke, globale Styles und Hilfsfunktionen für den Aufbau der Website bereit.
 
 ## Zweck
 
-Das Plugin bündelt die individuellen Blöcke für betreuungsparadies.ch und trennt projektspezifische Funktionen sauber vom Theme.
+Das Plugin bündelt alle individuellen Blöcke für betreuungsparadies.ch und hält Block-Logik, Styles und Rendering sauber vom Theme getrennt.
 
+## Blöcke
 
 ### Karten-Container
 
-![alt text](assets/container_fuer_karten.png)
-*Der Karten-Container steuert die Breiten der Karten und das Layout*
+![Karten-Container](assets/container_fuer_karten.png)
+
+*Der Karten-Container steuert Kartenbreite, Spalten und Layout.*
 
 Container-Block für mehrere Inhaltsblöcke in einem flexiblen Kartenraster.
 
@@ -22,8 +24,9 @@ Container-Block für mehrere Inhaltsblöcke in einem flexiblen Kartenraster.
 
 ### Inhaltskarte
 
-![alt text](assets/content_block.webp)
-*Die Inhaltskarte kann verschiedene Farben annehmen*
+![Inhaltskarte](assets/content_block.webp)
+
+*Die Inhaltskarte kann unterschiedliche Hintergrundfarben erhalten.*
 
 Karten-Block für kompakte Inhaltsbereiche mit Text, Medien und optionalen weiterführenden Elementen.
 
@@ -33,8 +36,9 @@ Karten-Block für kompakte Inhaltsbereiche mit Text, Medien und optionalen weite
 
 ### Card Chips
 
-![alt text](assets/chips.webp)
-*Die Chips können verschiedene Status annehmen*
+![Card Chips](assets/chips.webp)
+
+*Chips können aktive und inaktive Zustände anzeigen.*
 
 Block-Kombination für kurze, visuelle Status- oder Angebotsangaben innerhalb von Karten.
 
@@ -43,8 +47,10 @@ Block-Kombination für kurze, visuelle Status- oder Angebotsangaben innerhalb vo
 - Chips können als aktiv oder inaktiv markiert werden
 
 ### Card Buttons
-![alt text](assets/button_container.webp)
-*Die Buttons zeigen optisch an, ob es sich um Links, Dateien oder eine Email handelt*
+
+![Card Buttons](assets/button_container.webp)
+
+*Buttons zeigen den jeweiligen Linktyp visuell an.*
 
 Block-Kombination für einen oder mehrere Buttons innerhalb von Karten.
 
@@ -53,13 +59,22 @@ Block-Kombination für einen oder mehrere Buttons innerhalb von Karten.
 - Button-Stil kann zwischen gefüllt und Kontur gewählt werden
 
 ### Info-Liste
-![alt text](assets/info_liste.webp)
+
+![Info-Liste](assets/info_liste.webp)
+
 Block für kurze, strukturierte Informationszeilen innerhalb von Karten oder Inhaltsbereichen.
 
 - kombiniert eine Bezeichnung mit einem zugehörigen Wert
 - eignet sich für Angaben wie Öffnungszeiten, Standort, Alter oder Kontaktinformationen
 - unterstützt eine zweigeteilte oder gestapelte Darstellung
 
+### Weitere Blöcke
+
+Ergänzende Blöcke für bildstarke Bereiche, Stellenanzeigen und Team-Inhalte.
+
+- Bildslider mit einzelnen Slides für visuelle Inhaltsbereiche
+- Blöcke für offene Stellen inklusive passendem Button
+- Team-Blöcke für Hero-Bereiche, Teamprofile und gefilterte Team-Übersichten
 
 ## Technische Grundlage
 
@@ -70,9 +85,10 @@ Das Plugin ist als WordPress-Block-Plugin aufgebaut und verwendet:
 - SCSS
 - Webpack
 - dynamische Blöcke mit PHP-Rendering
-- projektbezogene globale Styles
+- globale Styles
 
 Die kompilierten Dateien liegen im Verzeichnis `build/`.
+
 ## Struktur
 
 ```text
@@ -120,6 +136,7 @@ npm run build
 Die Styles sind in globale und blockbezogene SCSS-Dateien aufgeteilt.
 
 Frontend-Styles gehören in die jeweiligen `frontend.scss`-Dateien.
+
 Editor-Styles gehören nur dann in `editor.scss`, wenn sie ausschliesslich für die Darstellung im Editor benötigt werden.
 
 Styles aus `frontend.scss` dürfen in `editor.scss` nicht nochmals dupliziert werden.
@@ -143,7 +160,7 @@ Verwendet werden unter anderem:
 
 ## Hinweise
 
-Das Plugin ist projektspezifisch für betreuungsparadies.ch entwickelt und nicht als allgemein verwendbares WordPress-Plugin gedacht.
+Das Plugin ist für den Einsatz auf betreuungsparadies.ch entwickelt und nicht als allgemein wiederverwendbares Plugin konzipiert.
 
 Änderungen an Blöcken, Styles oder Rendering-Logik sollten immer im Plugin vorgenommen werden, nicht direkt im Theme.
 
@@ -155,5 +172,3 @@ Das Plugin ist projektspezifisch für betreuungsparadies.ch entwickelt und nicht
 
 GPL v2 or later
 [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
-
-
