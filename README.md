@@ -147,16 +147,6 @@ Einige Blöcke werden serverseitig gerendert. Die Ausgabe erfolgt über PHP-Date
 
 Das betrifft insbesondere Blöcke, die Inhalte aus WordPress-Daten wie Custom Post Types, Taxonomien oder Meta-Feldern ausgeben.
 
-## Team
-
-Das Plugin enthält Funktionen und Blöcke für die Team-Darstellung.
-
-Verwendet werden unter anderem:
-
-* Custom Post Type `ud_team`
-* Taxonomie `team_standort`
-* Team-Meta-Felder wie E-Mail, Funktion und Leitungsstatus
-* dynamische Ausgabe über den Team-Loop-Block
 
 ## Hinweise
 
