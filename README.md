@@ -19,6 +19,8 @@ Enthalten sind unter anderem Blöcke für:
 - Team-Loop
 - Bildslider
 
+![alt text](assets/content_block.webp)
+
 ## Technische Grundlage
 
 Das Plugin ist als WordPress-Block-Plugin aufgebaut und verwendet:
@@ -31,7 +33,6 @@ Das Plugin ist als WordPress-Block-Plugin aufgebaut und verwendet:
 - projektbezogene globale Styles
 
 Die kompilierten Dateien liegen im Verzeichnis `build/`.
-
 ## Struktur
 
 ```text
