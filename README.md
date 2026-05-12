@@ -8,7 +8,6 @@ Das Plugin stellt projektspezifische WordPress-Blöcke, Styles und Hilfsfunktion
 
 Das Plugin bündelt die individuellen Blöcke für betreuungsparadies.ch und trennt projektspezifische Funktionen sauber vom Theme.
 
-Enthalten sind unter anderem Blöcke für:
 
 ### Karten-Container
 ![alt text](assets/container_fuer_karten.png)
