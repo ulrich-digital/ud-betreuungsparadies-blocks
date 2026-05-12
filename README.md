@@ -10,8 +10,10 @@ Das Plugin bündelt die individuellen Blöcke für betreuungsparadies.ch und tre
 
 
 ### Karten-Container
+
 ![alt text](assets/container_fuer_karten.png)
 *Der Karten-Container steuert die Breiten der Karten und das Layout*
+
 Container-Block für mehrere Inhaltsblöcke in einem flexiblen Kartenraster.
 
 - erlaubt Inhaltskarten, Bildslider, Team-Loop, offene Stellen, wiederverwendbare Blöcke und Abstandshalter
@@ -19,8 +21,10 @@ Container-Block für mehrere Inhaltsblöcke in einem flexiblen Kartenraster.
 - bietet Einstellungen für Kartenbreite, Spaltenanzahl und Kartenausrichtung
 
 ### Inhaltskarte
+
 ![alt text](assets/content_block.webp)
 *Die Inhaltskarte kann verschiedene Farben annehmen*
+
 Karten-Block für kompakte Inhaltsbereiche mit Text, Medien und optionalen weiterführenden Elementen.
 
 - dient als flexible Karte für Titel, Text, Bilder, Buttons, Chips und Infobereiche
@@ -28,12 +32,20 @@ Karten-Block für kompakte Inhaltsbereiche mit Text, Medien und optionalen weite
 - kann bei Bedarf eine eigene Kartenbreite erhalten
 
 
-
-
-
+### Card Chips
 
 ![alt text](assets/chips.webp)
 *Die Chips können verschiedene Status annehmen*
+
+Block-Kombination für kurze, visuelle Status- oder Angebotsangaben innerhalb von Karten.
+
+- der Container ordnet mehrere Chips flexibel und umbrechend an
+- einzelne Chips enthalten einen frei editierbaren Text
+- Chips können als aktiv oder inaktiv markiert werden
+
+
+
+
 ## Technische Grundlage
 
 Das Plugin ist als WordPress-Block-Plugin aufgebaut und verwendet:
