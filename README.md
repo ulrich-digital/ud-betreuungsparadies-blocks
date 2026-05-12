@@ -43,7 +43,15 @@ Block-Kombination für kurze, visuelle Status- oder Angebotsangaben innerhalb vo
 - einzelne Chips enthalten einen frei editierbaren Text
 - Chips können als aktiv oder inaktiv markiert werden
 
+### Card Buttons
+![alt text](assets/button_container.webp)
+*Die Buttons zeigen optisch an, ob es sich um Links, Dateien oder eine Email handelt*
 
+Block-Kombination für einen oder mehrere Buttons innerhalb von Karten.
+
+- der Container ordnet Buttons horizontal oder vertikal an
+- einzelne Buttons unterstützen Seite/URL, Datei/PDF, E-Mail und Telefon
+- Button-Stil kann zwischen gefüllt und Kontur gewählt werden
 
 
 ## Technische Grundlage
