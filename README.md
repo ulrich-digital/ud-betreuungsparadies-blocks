@@ -10,21 +10,28 @@ Das Plugin bündelt die individuellen Blöcke für betreuungsparadies.ch und tre
 
 Enthalten sind unter anderem Blöcke für:
 
-- Inhaltskarten
-- Kartengrid
-- Karten-Buttons
-- Chips
-- Infobereiche
-- Team-Darstellung
-- Team-Loop
-- Bildslider
-
-
+### Karten-Container
 ![alt text](assets/container_fuer_karten.png)
 *Der Karten-Container steuert die Breiten der Karten und das Layout*
+Container-Block für mehrere Inhaltsblöcke in einem flexiblen Kartenraster.
 
+- erlaubt Inhaltskarten, Bildslider, Team-Loop, offene Stellen, wiederverwendbare Blöcke und Abstandshalter
+- unterstützt die Layouts «Normal», «Masonry» und «Spaltenanzahl»
+- bietet Einstellungen für Kartenbreite, Spaltenanzahl und Kartenausrichtung
+
+### Inhaltskarte
 ![alt text](assets/content_block.webp)
 *Die Inhaltskarte kann verschiedene Farben annehmen*
+Karten-Block für kompakte Inhaltsbereiche mit Text, Medien und optionalen weiterführenden Elementen.
+
+- dient als flexible Karte für Titel, Text, Bilder, Buttons, Chips und Infobereiche
+- unterstützt wählbare Hintergrundverläufe
+- kann bei Bedarf eine eigene Kartenbreite erhalten
+
+
+
+
+
 
 ![alt text](assets/chips.webp)
 *Die Chips können verschiedene Status annehmen*
