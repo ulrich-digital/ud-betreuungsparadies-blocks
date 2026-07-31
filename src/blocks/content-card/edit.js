@@ -15,8 +15,11 @@ import {
 	PanelBody,
 	SelectControl,
 	ToolbarButton,
+    ToolbarGroup,
 	ToolbarDropdownMenu,
 } from "@wordpress/components";
+
+import { seen, unseen } from "@wordpress/icons";
 
 import gradients from "../../utils/gradients";
 
@@ -154,7 +157,11 @@ registerBlockType("ud-betreuungsparadies/content-card", {
 			];
 		}, []);
 
-		const { gradient = DEFAULT_GRADIENT, cardWidth = "" } = attributes;
+const {
+	isActive = true,
+	gradient = DEFAULT_GRADIENT,
+	cardWidth = "",
+} = attributes;
 
 		useEffect(() => {
 			if (!attributes.gradient && DEFAULT_GRADIENT) {
@@ -162,39 +169,60 @@ registerBlockType("ud-betreuungsparadies/content-card", {
 			}
 		}, [attributes.gradient, setAttributes]);
 
-		const blockProps = useBlockProps({
-			className: "ud-content-card ud-betreuungsparadies-card",
-			style: {
-				...(gradient ? { background: gradient } : {}),
-				...(cardWidth ? { "--ud-content-card-width": cardWidth } : {}),
-			},
-		});
+const blockProps = useBlockProps({
+	className: [
+		"ud-content-card",
+		"ud-betreuungsparadies-card",
+		!isActive ? "is-inactive" : "",
+	]
+		.filter(Boolean)
+		.join(" "),
+	style: {
+		...(gradient ? { background: gradient } : {}),
+		...(cardWidth ? { "--ud-content-card-width": cardWidth } : {}),
+	},
+});
 
 		return (
 			<>
-				<BlockControls>
-					<ToolbarDropdownMenu
-						icon={
-							<span
-								className="ud-gradient-toolbar-swatch"
-								style={{ background: gradient }}
-							/>
-						}
-						label="Gradient wählen"
-						controls={gradients.map((item) => ({
-							title: item.name,
-							icon: (
-								<span
-									className="ud-gradient-toolbar-swatch"
-									style={{ background: item.gradient }}
-								/>
-							),
-							onClick: () =>
-								setAttributes({ gradient: item.gradient }),
-							isActive: gradient === item.gradient,
-						}))}
+<BlockControls>
+	<ToolbarGroup>
+		<ToolbarButton
+			icon={isActive ? seen : unseen}
+			label={
+				isActive
+					? "Inhalts-Karte ausblenden"
+					: "Inhalts-Karte anzeigen"
+			}
+			isPressed={!isActive}
+			onClick={() => {
+				setAttributes({ isActive: !isActive });
+			}}
+		/>
+
+		<ToolbarDropdownMenu
+			icon={
+				<span
+					className="ud-gradient-toolbar-swatch"
+					style={{ background: gradient }}
+				/>
+			}
+			label="Gradient wählen"
+			controls={gradients.map((item) => ({
+				title: item.name,
+				icon: (
+					<span
+						className="ud-gradient-toolbar-swatch"
+						style={{ background: item.gradient }}
 					/>
-				</BlockControls>
+				),
+				onClick: () =>
+					setAttributes({ gradient: item.gradient }),
+				isActive: gradient === item.gradient,
+			}))}
+		/>
+	</ToolbarGroup>
+</BlockControls>
 
 				<InspectorControls>
 					<PanelBody title="Kartenbreite" initialOpen={false}>
@@ -223,23 +251,7 @@ registerBlockType("ud-betreuungsparadies/content-card", {
 		);
 	},
 
-	save: function Save({ attributes }) {
-		const { gradient = DEFAULT_GRADIENT, cardWidth = "" } = attributes;
-
-		return (
-			<div
-				{...useBlockProps.save({
-					className: "ud-content-card ud-betreuungsparadies-card",
-					style: {
-						...(gradient ? { background: gradient } : {}),
-						...(cardWidth
-							? { "--ud-content-card-width": cardWidth }
-							: {}),
-					},
-				})}
-			>
-				<InnerBlocks.Content />
-			</div>
-		);
-	},
+save: function Save() {
+	return <InnerBlocks.Content />;
+},
 });

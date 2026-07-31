@@ -1,0 +1,141 @@
+
+
+
+.ud-kita-gallery-grid.alignfull{
+    width: calc(100% - var(--ud-site-inline-spacing) * 2)!important;
+    margin-right: calc(var(--ud-site-inline-spacing) * 1)!important;
+    margin-left: calc(var(--ud-site-inline-spacing) * 1)!important;
+}
+
+
+.wp-block-ud-betreuungsparadies-kita-gallery-grid,
+.ud-kita-gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: clamp(0.75rem, 1.5vw, 1.25rem);
+	width: min(100%, 78rem);
+	margin-inline: auto;
+}
+
+.ud-kita-gallery-grid__item {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	padding: 0.35rem;
+	border: 0;
+	border-radius: var(--ud-radius-xl, 1.25rem);
+	background: linear-gradient(180deg, #c5e6b1 0%, #b5d99c 100%);
+	box-shadow: var(--ud-shadow-card, 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12));
+}
+
+.ud-kita-gallery-grid__item .wp-block-image {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.ud-kita-gallery-grid__item .wp-block-image img,
+.ud-kita-gallery-grid__image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: calc(var(--ud-radius-xl, 1.25rem) - 0.35rem);
+	object-fit: cover;
+}
+
+.ud-kita-gallery-grid__item--large {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.ud-kita-gallery-grid__item--tall {
+	grid-column: span 1;
+	grid-row: span 2;
+}
+
+.ud-kita-gallery-grid__item--small-top,
+.ud-kita-gallery-grid__item--small-bottom,
+.ud-kita-gallery-grid__item--normal-left,
+.ud-kita-gallery-grid__item--normal-middle {
+	grid-column: span 1;
+	grid-row: span 1;
+}
+
+.ud-kita-gallery-grid__item--wide {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+
+.ud-kita-gallery-grid__item--large .wp-block-image img,
+.ud-kita-gallery-grid__item--large .ud-kita-gallery-grid__image {
+	aspect-ratio: 4 / 3;
+}
+
+.ud-kita-gallery-grid__item--tall .wp-block-image img,
+.ud-kita-gallery-grid__item--tall .ud-kita-gallery-grid__image {
+	aspect-ratio: 3 / 4;
+}
+
+.ud-kita-gallery-grid__item--small-top .wp-block-image img,
+.ud-kita-gallery-grid__item--small-bottom .wp-block-image img,
+.ud-kita-gallery-grid__item--normal-left .wp-block-image img,
+.ud-kita-gallery-grid__item--normal-middle .wp-block-image img,
+.ud-kita-gallery-grid__item--small-top .ud-kita-gallery-grid__image,
+.ud-kita-gallery-grid__item--small-bottom .ud-kita-gallery-grid__image,
+.ud-kita-gallery-grid__item--normal-left .ud-kita-gallery-grid__image,
+.ud-kita-gallery-grid__item--normal-middle .ud-kita-gallery-grid__image {
+	aspect-ratio: 4 / 3;
+}
+
+.ud-kita-gallery-grid__item--wide .wp-block-image img,
+.ud-kita-gallery-grid__item--wide .ud-kita-gallery-grid__image {
+	aspect-ratio: 8 / 3;
+}
+
+.ud-kita-gallery-grid__item .lightbox-trigger {
+	z-index: 2;
+}
+
+@media (max-width: 900px) {
+	.wp-block-ud-betreuungsparadies-kita-gallery-grid,
+	.ud-kita-gallery-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.ud-kita-gallery-grid__item--large,
+	.ud-kita-gallery-grid__item--wide {
+		grid-column: span 2;
+	}
+
+	.ud-kita-gallery-grid__item--tall {
+		grid-column: span 1;
+		grid-row: span 2;
+	}
+}
+
+@media (max-width: 560px) {
+	.wp-block-ud-betreuungsparadies-kita-gallery-grid,
+	.ud-kita-gallery-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ud-kita-gallery-grid__item,
+	.ud-kita-gallery-grid__item--large,
+	.ud-kita-gallery-grid__item--tall,
+	.ud-kita-gallery-grid__item--small-top,
+	.ud-kita-gallery-grid__item--small-bottom,
+	.ud-kita-gallery-grid__item--normal-left,
+	.ud-kita-gallery-grid__item--normal-middle,
+	.ud-kita-gallery-grid__item--wide {
+		grid-column: auto;
+		grid-row: auto;
+	}
+
+	.ud-kita-gallery-grid__item .wp-block-image img,
+	.ud-kita-gallery-grid__image,
+	.ud-kita-gallery-grid__item--large .wp-block-image img,
+	.ud-kita-gallery-grid__item--tall .wp-block-image img,
+	.ud-kita-gallery-grid__item--wide .wp-block-image img {
+		aspect-ratio: 4 / 3;
+	}
+}

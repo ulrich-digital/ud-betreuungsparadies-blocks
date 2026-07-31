@@ -26,10 +26,6 @@
         "nurLeitung": {
             "type": "boolean",
             "default": false
-        },
-        "leitungZuerst": {
-            "type": "boolean",
-            "default": true
         }
     },
     "editorScript": "file:./editor-script.js",

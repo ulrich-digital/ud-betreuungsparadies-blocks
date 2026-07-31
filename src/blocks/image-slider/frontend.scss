@@ -103,6 +103,15 @@
 		i {
 			display: block;
 			line-height: 1;
+
+			display: block;
+			background: var(--ud-image-slider-gradient);
+			background-clip: text;
+			-webkit-background-clip: text;
+			line-height: 1;
+			color: transparent;
+			-webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 2px #00000033);
 		}
 	}
 

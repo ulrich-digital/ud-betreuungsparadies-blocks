@@ -1,5 +1,10 @@
 import { registerBlockType } from "@wordpress/blocks";
-import { 	BlockControls, InnerBlocks, useBlockProps, RichText } from "@wordpress/block-editor";
+import {
+	BlockControls,
+	InnerBlocks,
+	useBlockProps,
+	RichText,
+} from "@wordpress/block-editor";
 
 import metadata from "./block.json";
 import { useSelect } from "@wordpress/data";
@@ -28,7 +33,6 @@ const TEMPLATE = [
 	["ud-betreuungsparadies/image-slide"],
 ];
 
-
 registerBlockType(metadata.name, {
 	edit: function Edit({ attributes, setAttributes }) {
 		const { title } = attributes;
@@ -42,7 +46,12 @@ registerBlockType(metadata.name, {
 
 		const blockProps = useBlockProps({
 			className: "ud-image-slider-wrapper",
-			style: gradient ? { background: gradient } : undefined,
+			style: gradient
+				? {
+						background: gradient,
+						"--ud-image-slider-gradient": gradient,
+					}
+				: undefined,
 		});
 
 		const titleBg = getFirstColor(gradient);
@@ -76,8 +85,7 @@ registerBlockType(metadata.name, {
 					<RichText
 						tagName="h3"
 						className="ud-image-slider__title"
-	style={{ background: titleBg }}
-
+						style={{ background: titleBg }}
 						value={title}
 						onChange={(value) => setAttributes({ title: value })}
 						placeholder="Überschrift eingeben…"
@@ -131,7 +139,12 @@ registerBlockType(metadata.name, {
 
 		const blockProps = useBlockProps.save({
 			className: "ud-image-slider-wrapper",
-			style: gradient ? { background: gradient } : undefined,
+			style: gradient
+				? {
+						background: gradient,
+						"--ud-image-slider-gradient": gradient,
+					}
+				: undefined,
 		});
 
 		const titleBg = getFirstColor(gradient);
@@ -142,8 +155,7 @@ registerBlockType(metadata.name, {
 					<RichText.Content
 						tagName="h3"
 						className="ud-image-slider__title"
-	style={{ background: titleBg }}
-
+						style={{ background: titleBg }}
 						value={title}
 					/>
 				)}

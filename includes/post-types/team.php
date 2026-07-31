@@ -82,6 +82,7 @@ function ud_team_cpt_register_post_type() {
             [
                 'ud-betreuungsparadies/card-grid',
                 [
+                    'align'         => 'wide',
                     'cardWidth'     => '280px',
                     'cardAlignment' => 'start',
                     'lock'          => [
@@ -108,9 +109,17 @@ function ud_team_cpt_register_post_type() {
                                 ],
                             ],
                             [
-                                'core/paragraph',
+                                'core/list',
                                 [
-                                    'placeholder' => 'z. B. Co-Geschäftsleitung, Kitaleitung Kita Ibach…',
+                                    'className' => 'is-style-ud-list-no-bullets',
+                                ],
+                                [
+                                    [
+                                        'core/list-item',
+                                        [
+                                            'placeholder' => 'z. B. Co-Geschäftsleitung, Kitaleitung Kita Ibach…',
+                                        ],
+                                    ],
                                 ],
                             ],
                         ],
@@ -134,9 +143,17 @@ function ud_team_cpt_register_post_type() {
                                 ],
                             ],
                             [
-                                'core/paragraph',
+                                'core/list',
                                 [
-                                    'placeholder' => 'z. B. Fachfrau Betreuung EFZ, Weiterbildung…',
+                                    'className' => 'is-style-ud-list-no-bullets',
+                                ],
+                                [
+                                    [
+                                        'core/list-item',
+                                        [
+                                            'placeholder' => 'z. B. Fachfrau Betreuung EFZ, Weiterbildung…',
+                                        ],
+                                    ],
                                 ],
                             ],
                         ],
@@ -159,11 +176,20 @@ function ud_team_cpt_register_post_type() {
                                 ],
                             ],
                             [
-                                'core/paragraph',
+                                'core/list',
                                 [
-                                    'placeholder' => 'z. B. seit 2025',
+                                    'className' => 'is-style-ud-list-no-bullets',
+                                ],
+                                [
+                                    [
+                                        'core/list-item',
+                                        [
+                                            'placeholder' => 'z. B. seit 2025',
+                                        ],
+                                    ],
                                 ],
                             ],
+
                         ],
                     ],
                 ],

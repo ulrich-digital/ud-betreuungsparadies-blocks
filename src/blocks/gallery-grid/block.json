@@ -1,0 +1,106 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ud-betreuungsparadies/kita-gallery-grid",
+    "title": "Kita-Bildergrid",
+    "category": "design",
+    "icon": "format-gallery",
+    "description": "Vordefiniertes Bildergrid mit festen Bildpositionen.",
+    "textdomain": "betreuungsparadies-ud",
+    "attributes": {
+        "gradient": {
+            "type": "string",
+            "default": ""
+        },
+        "imageLargeId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageLargeUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageLargeAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageTallId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageTallUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageTallAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageSmallTopId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageSmallTopUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageSmallTopAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageSmallBottomId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageSmallBottomUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageSmallBottomAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageNormalLeftId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageNormalLeftUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageNormalLeftAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageNormalMiddleId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageNormalMiddleUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageNormalMiddleAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageWideId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageWideUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageWideAlt": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "supports": {
+        "html": false,
+        "reusable": true
+    },
+    "editorScript": "file:./editor-script.js",
+"render": "file:./render.php"
+}

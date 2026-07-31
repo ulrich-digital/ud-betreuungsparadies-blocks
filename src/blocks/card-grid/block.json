@@ -33,7 +33,8 @@
             "wide",
             "full"
         ],
-        "html": false
+        "html": false,
+        "reusable": true
     },
     "editorScript": "file:./editor-script.js",
     "script": "file:./frontend-script.js"

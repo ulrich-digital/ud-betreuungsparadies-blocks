@@ -57,6 +57,12 @@ module.exports = {
 
 		"blocks/offene-stelle-button/editor-script":
 			"./src/blocks/offene-stelle-button/edit.js",
+
+		"blocks/gallery-grid/editor-script":
+			"./src/blocks/gallery-grid/edit.js",
+
+"blocks/fokus-button/editor-script":
+	"./src/blocks/fokus-button/edit.js",
 	},
 
 	output: {

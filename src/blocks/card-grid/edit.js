@@ -42,6 +42,8 @@ const getGridStyle = ({ layoutMode, columns, cardWidth }) => {
 };
 
 registerBlockType(metadata.name, {
+	...metadata,
+
 	edit: function Edit({ attributes, setAttributes }) {
 		const { layoutMode, columns, cardWidth, cardAlignment } = attributes;
 		const isVerticalLayout =

@@ -12,6 +12,8 @@
 @use "./blocks/team-loop/frontend" as *;
 @use "./blocks/offene-stelle/frontend" as *;
 @use "./blocks/offene-stelle-button/frontend" as *;
+@use "./blocks/gallery-grid/frontend" as *;
+@use "./blocks/fokus-button/frontend" as *;
 
 @use "./block-styles/image-scroll-reveal/frontend" as *;
 @use "./block-styles/paragraph-lead/frontend" as *;
@@ -46,4 +48,10 @@ p.is-style-ud-meta {
 	.ud-card-chips + .ud-info-list {
 		margin-top: var(--ud-space-100);
 	}
+}
+
+
+.ud-betreuungsparadies-card h3 + .is-style-ud-meta{
+	font-size: 0.75rem;
+margin-top: -0.75rem;
 }

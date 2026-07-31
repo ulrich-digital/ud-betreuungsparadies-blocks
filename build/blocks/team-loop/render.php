@@ -7,17 +7,19 @@
 if (! defined('ABSPATH')) {
     exit;
 }
-$heading        = isset($attributes['heading']) ? sanitize_text_field($attributes['heading']) : '';
-$standort       = isset($attributes['standort']) ? sanitize_key($attributes['standort']) : '';
-$nur_leitung    = ! empty($attributes['nurLeitung']);
-$leitung_zuerst = ! empty($attributes['leitungZuerst']);
+
+$heading     = isset($attributes['heading']) ? sanitize_text_field($attributes['heading']) : '';
+$standort    = isset($attributes['standort']) ? sanitize_key($attributes['standort']) : '';
+$nur_leitung = ! empty($attributes['nurLeitung']);
 
 $args = [
     'post_type'      => 'ud_team',
     'post_status'    => 'publish',
     'posts_per_page' => -1,
-    'orderby'        => 'menu_order title',
-    'order'          => 'ASC',
+    'orderby'        => [
+        'menu_order' => 'ASC',
+        'title'      => 'ASC',
+    ],
 ];
 
 if ($standort) {
@@ -47,22 +49,6 @@ if (! $query->have_posts()) {
 }
 
 $posts = $query->posts;
-
-if ($leitung_zuerst) {
-    usort(
-        $posts,
-        function ($a, $b) {
-            $a_is_leitung = (int) get_post_meta($a->ID, 'team_is_leitung', true);
-            $b_is_leitung = (int) get_post_meta($b->ID, 'team_is_leitung', true);
-
-            if ($a_is_leitung !== $b_is_leitung) {
-                return $b_is_leitung <=> $a_is_leitung;
-            }
-
-            return strcasecmp(get_the_title($a), get_the_title($b));
-        }
-    );
-}
 
 if (! function_exists('ud_bp_team_loop_find_block')) {
     function ud_bp_team_loop_find_block($blocks, $block_name) {
@@ -193,13 +179,12 @@ $wrapper_attributes = get_block_wrapper_attributes(
 );
 ?>
 
-<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-        ?>>
-<?php if ($heading) : ?>
-	<h3 class="ud-team-loop__heading">
-		<?php echo esc_html($heading); ?>
-	</h3>
-<?php endif; ?>
+<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+    <?php if ($heading) : ?>
+        <h3 class="ud-team-loop__heading">
+            <?php echo esc_html($heading); ?>
+        </h3>
+    <?php endif; ?>
 
     <div class="ud-team-loop__grid">
         <?php foreach ($posts as $post) : ?>
@@ -207,24 +192,23 @@ $wrapper_attributes = get_block_wrapper_attributes(
             $team_id       = $post->ID;
             $name          = get_the_title($team_id);
             $email         = get_post_meta($team_id, 'team_email', true);
-            $email_label = get_post_meta($team_id, 'team_email_label', true);
-
-            if (! $email_label) {
-                $email_label = $name;
-            }
+            $email_label   = get_post_meta($team_id, 'team_email_label', true);
             $image         = ud_bp_team_loop_get_image($team_id);
             $gradient      = ud_bp_team_loop_get_gradient($team_id);
             $function_text = ud_bp_team_loop_get_function_text($team_id);
             $permalink     = get_permalink($team_id);
 
+            if (! $email_label) {
+                $email_label = $name;
+            }
+
             $style = $gradient ? sprintf(' style="background:%s;"', esc_attr($gradient)) : '';
             ?>
-            <article class="ud-team-loop-card ud-betreuungsparadies-card" <?php echo $style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-                                                                            ?>>
+
+            <article class="ud-team-loop-card ud-betreuungsparadies-card"<?php echo $style; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                 <?php if ($image) : ?>
                     <a class="ud-team-loop-card__media" href="<?php echo esc_url($permalink); ?>">
-                        <?php echo $image; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-                        ?>
+                        <?php echo $image; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     </a>
                 <?php endif; ?>
 

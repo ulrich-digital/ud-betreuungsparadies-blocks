@@ -56,3 +56,12 @@
 	line-height: 1;
 	letter-spacing: -0.03em;
 }
+
+.editor-styles-wrapper {
+    .ud-content-card {
+        &.is-inactive {
+            opacity: .55;
+            filter: grayscale(1);
+        }
+    }
+}

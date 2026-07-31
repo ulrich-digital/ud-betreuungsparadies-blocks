@@ -1,10 +1,15 @@
 const isBlockEditor = () => {
+	if (!document.body) {
+		return false;
+	}
+
 	return (
 		document.body.classList.contains("block-editor-page") ||
 		document.body.classList.contains("site-editor-php") ||
-		document.querySelector(".block-editor-block-list__layout")
+		document.querySelector(".block-editor-block-list__layout") !== null
 	);
 };
+
 
 const masonrySelector = ".ud-card-grid.ud-card-grid--masonry";
 

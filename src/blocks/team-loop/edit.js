@@ -50,9 +50,26 @@ const getTeamHeroData = (rawContent = "") => {
 	};
 };
 
+const sortTeamMembersByMenuOrder = (members = []) => {
+	return [...members].sort((a, b) => {
+		const menuOrderCompare =
+			(a.menu_order ?? 0) - (b.menu_order ?? 0);
+
+		if (menuOrderCompare !== 0) {
+			return menuOrderCompare;
+		}
+
+		const titleA = a.title?.rendered || "";
+		const titleB = b.title?.rendered || "";
+
+		return titleA.localeCompare(titleB, "de-CH");
+	});
+};
+
 registerBlockType(metadata.name, {
 	edit: function Edit({ attributes, setAttributes }) {
-		const { heading, standort, nurLeitung, leitungZuerst } = attributes;
+		const { heading, standort, nurLeitung } = attributes;
+
 		const terms = useSelect((select) => {
 			return select("core").getEntityRecords(
 				"taxonomy",
@@ -67,6 +84,7 @@ registerBlockType(metadata.name, {
 		const selectedTerm = (terms || []).find(
 			(term) => term.slug === standort
 		);
+
 		const selectedTermId = selectedTerm?.id || null;
 
 		const teamMembers = useSelect(
@@ -74,7 +92,7 @@ registerBlockType(metadata.name, {
 				const query = {
 					per_page: -1,
 					context: "edit",
-					orderby: "title",
+					orderby: "menu_order",
 					order: "asc",
 				};
 
@@ -88,27 +106,18 @@ registerBlockType(metadata.name, {
 					query
 				);
 			},
-			[selectedTermId, nurLeitung, leitungZuerst]
+			[selectedTermId]
 		);
 
-		const filteredTeamMembers = (teamMembers || [])
-			.filter((member) => {
-				if (!nurLeitung) {
-					return true;
-				}
+		const filteredTeamMembers = sortTeamMembersByMenuOrder(
+			teamMembers || []
+		).filter((member) => {
+			if (!nurLeitung) {
+				return true;
+			}
 
-				return !!member.meta?.team_is_leitung;
-			})
-			.sort((a, b) => {
-				if (!leitungZuerst) {
-					return 0;
-				}
-
-				return (
-					Number(!!b.meta?.team_is_leitung) -
-					Number(!!a.meta?.team_is_leitung)
-				);
-			});
+			return !!member.meta?.team_is_leitung;
+		});
 
 		const standortOptions = [
 			{
@@ -159,15 +168,6 @@ registerBlockType(metadata.name, {
 							checked={nurLeitung}
 							onChange={(value) =>
 								setAttributes({ nurLeitung: value })
-							}
-							__nextHasNoMarginBottom={true}
-						/>
-
-						<ToggleControl
-							label="Mitglieder mit Leitungsfunktion zuerst ausgeben"
-							checked={leitungZuerst}
-							onChange={(value) =>
-								setAttributes({ leitungZuerst: value })
 							}
 							__nextHasNoMarginBottom={true}
 						/>

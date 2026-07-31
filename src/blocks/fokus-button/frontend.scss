@@ -1,0 +1,39 @@
+.ud-fokus-button {
+	--ud-fokus-button-size: 110px;
+
+	position: absolute;
+	top: -150px;
+	right: 40px;
+	left: auto;
+	z-index: 2;
+
+	@media screen and (max-width: 600px) {
+		--ud-fokus-button-size: 100px;
+
+		top: -130px;
+		right: 40px;
+	}
+
+	.ud-card-button__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0;
+		padding: 2px;
+		width: var(--ud-fokus-button-size);
+		height: var(--ud-fokus-button-size);
+		border-radius: 50%;
+		text-align: center;
+		white-space: normal;
+		line-height: 1.1;
+		aspect-ratio: 1 / 1;
+
+
+
+
+		&::after {
+			display: none!important;
+			content: none!important;
+		}
+	}
+}

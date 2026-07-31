@@ -44,11 +44,11 @@
 
 	.wp-block-list {
 		margin-top: 0;
-		margin-top: calc(var(--ud-space-200) * -1 + 0.5rem);
+		margin-top: calc(var(--ud-space-200) * -1 + .5rem);
 		margin-bottom: 0;
 
 		li + li {
-			margin-top: 0.5rem;
+			margin-top: 0.25rem;
 		}
 	}
 }
