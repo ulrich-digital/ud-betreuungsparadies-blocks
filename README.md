@@ -1,91 +1,104 @@
-# UD Blocks: Betreuungsparadies
+# UD Modular Content Blocks
 
-Block-Plugin für die Website betreuungsparadies.ch.
+Projektspezifisches WordPress-Plugin für ein modulares Redaktionssystem mit eigenen Gutenberg-Blöcken.
 
-Das Plugin stellt mehrere WordPress-Blöcke, globale Styles und Hilfsfunktionen für den Aufbau der Website bereit.
+Das Plugin verbindet flexible Kartenraster, Inhaltskarten, strukturierte Angaben, Medien, Teamprofile und Stellenangebote. Block-Logik, Darstellung und dynamisches Rendering werden gemeinsam im Plugin gepflegt.
 
 ## Zweck
 
-Das Plugin bündelt alle individuellen Blöcke für betreuungsparadies.ch und hält Block-Logik, Styles und Rendering sauber vom Theme getrennt.
+UD Modular Content Blocks stellt der Redaktion aufeinander abgestimmte Inhaltsbausteine bereit. Die einzelnen Blöcke bilden wiederkehrende Aufgaben gezielt ab und fügen sich im Editor und im Frontend zu einem gemeinsamen Gestaltungssystem zusammen.
 
-## Blöcke
+Die Lösung wurde für den Webauftritt von [betreuungsparadies.ch](https://betreuungsparadies.ch) entwickelt.
 
-### Karten-Container
+## Karten-Container
 
-![Karten-Container](assets/container_fuer_karten.png)
+![Karten-Container mit zwei Inhaltskarten im Gutenberg-Editor](assets/ud-bp-container-editor.webp)
 
-*Der Karten-Container steuert Kartenbreite, Spalten und Layout.*
+*Der Karten-Container steuert Layout, Kartenbreite und Ausrichtung zentral.*
 
-Container-Block für mehrere Inhaltsblöcke in einem flexiblen Kartenraster.
+Der Karten-Container ordnet unterschiedliche Inhaltsbausteine in einem gemeinsamen Raster an.
 
-- erlaubt Inhaltskarten, Bildslider, Team-Loop, offene Stellen, wiederverwendbare Blöcke und Abstandshalter
+- nimmt Inhaltskarten, Bildslider, Team-Loop, offene Stellen, wiederverwendbare Blöcke und Abstandshalter auf
 - unterstützt die Layouts «Normal», «Masonry» und «Spaltenanzahl»
 - bietet Einstellungen für Kartenbreite, Spaltenanzahl und Kartenausrichtung
+- kann Karten am oberen Rand ausrichten oder auf eine gemeinsame Höhe strecken
 
-### Inhaltskarte
+## Inhaltskarte
 
-![Inhaltskarte](assets/content_block.webp)
+![Inhaltskarte mit geöffnetem Auswahlmenü für Farbverläufe](assets/ud-bp-inhaltskarte-editor_v02.webp)
 
-*Die Inhaltskarte kann unterschiedliche Hintergrundfarben erhalten.*
+*Über die Block-Werkzeugleiste erhält die Inhaltskarte einen der projektspezifisch definierten Farbverläufe.*
 
-Karten-Block für kompakte Inhaltsbereiche mit Text, Medien und optionalen weiterführenden Elementen.
+Die Inhaltskarte verbindet eine verlässliche gestalterische Form mit frei kombinierbaren Gutenberg-Blöcken.
 
-- dient als flexible Karte für Titel, Text, Bilder, Buttons, Chips und Infobereiche
-- unterstützt wählbare Hintergrundverläufe
+- erlaubt Überschriften, Absätze, Listen, Bilder, Gruppen und weitere projektspezifische Blöcke
+- stellt abgestimmte Farbverläufe zur Auswahl
 - kann bei Bedarf eine eigene Kartenbreite erhalten
+- besitzt einen direkt im Editor steuerbaren Sichtbarkeitsstatus
+
+## Strukturierte Komponenten
+
+Kleinere Komponenten bilden wiederkehrende Angaben und Verknüpfungen innerhalb der Inhaltskarten ab.
 
 ### Card Chips
 
-![Card Chips](assets/chips.webp)
-
-*Chips können aktive und inaktive Zustände anzeigen.*
-
-Block-Kombination für kurze, visuelle Status- oder Angebotsangaben innerhalb von Karten.
-
-- der Container ordnet mehrere Chips flexibel und umbrechend an
-- einzelne Chips enthalten einen frei editierbaren Text
-- Chips können als aktiv oder inaktiv markiert werden
-
-### Card Buttons
-
-![Card Buttons](assets/button_container.webp)
-
-*Buttons zeigen den jeweiligen Linktyp visuell an.*
-
-Block-Kombination für einen oder mehrere Buttons innerhalb von Karten.
-
-- der Container ordnet Buttons horizontal oder vertikal an
-- einzelne Buttons unterstützen Seite/URL, Datei/PDF, E-Mail und Telefon
-- Button-Stil kann zwischen gefüllt und Kontur gewählt werden
+- ordnen mehrere kurze Status- oder Angebotsangaben flexibel und umbrechend an
+- enthalten einen direkt bearbeitbaren Text
+- unterstützen einen aktiven und einen inaktiven Zustand
 
 ### Info-Liste
 
-![Info-Liste](assets/info_liste.webp)
+- verbindet eine Bezeichnung mit dem zugehörigen Wert
+- eignet sich beispielsweise für Öffnungszeiten, Standorte, Altersangaben oder Kontaktinformationen
+- unterstützt eine zweigeteilte und eine gestapelte Darstellung
 
-Block für kurze, strukturierte Informationszeilen innerhalb von Karten oder Inhaltsbereichen.
+### Card Buttons
 
-- kombiniert eine Bezeichnung mit einem zugehörigen Wert
-- eignet sich für Angaben wie Öffnungszeiten, Standort, Alter oder Kontaktinformationen
-- unterstützt eine zweigeteilte oder gestapelte Darstellung
+![Zwei Inhaltskarten mit Buttons für unterschiedliche Linktypen und Darstellungsstile](assets/ud-bp-buttons-frontend.webp)
 
-### Weitere Blöcke
+*Interne und externe Links, Dokumente, E-Mail-Adressen und Telefonnummern erhalten jeweils das passende Symbol.*
 
-Ergänzende Blöcke für bildstarke Bereiche, Stellenanzeigen und Team-Inhalte.
+- der Container ordnet mehrere Buttons horizontal oder vertikal an
+- einzelne Buttons unterstützen Seite beziehungsweise URL, Datei beziehungsweise PDF, E-Mail und Telefon
+- der Linktyp wird aus dem gepflegten Ziel abgeleitet
+- der Button-Stil kann zwischen gefüllt und Kontur gewählt werden
 
-- Bildslider mit einzelnen Slides für visuelle Inhaltsbereiche
-- Blöcke für offene Stellen inklusive passendem Button
-- Team-Blöcke für Hero-Bereiche, Teamprofile und gefilterte Team-Übersichten
+## Teamprofile
+
+Das Plugin ergänzt WordPress um einen eigenen Inhaltstyp für Teammitglieder. Eine vorbereitete Blockstruktur verbindet Portrait, persönlichen Inhalt, Funktion, Ausbildung und weitere Angaben zu einem einheitlich aufgebauten Profil.
+
+![Strukturiertes Teamprofil mit Inhaltskarten und Teamangaben im Gutenberg-Editor](assets/ud-bp-cpt-team-editor.webp)
+
+*Profilinhalt, Leitungsfunktion, E-Mail-Adresse und Standort werden in einer gemeinsamen Editoransicht gepflegt.*
+
+Zusätzliche Angaben wie E-Mail-Adresse, Leitungsfunktion und Standort werden strukturiert gespeichert. Der Team-Loop übernimmt die zentral gepflegten Profile in unterschiedliche Übersichten und kann sie nach Standort sowie Leitungsfunktion filtern.
+
+![Frontend eines Teamprofils mit Portrait, Zitat, Funktion, Ausbildung und Eintrittsjahr](assets/ud-bp-cpt-team-frontend.webp)
+
+*Die vorbereitete Inhaltsstruktur führt Portrait und persönliche Angaben zu einem konsistenten Teamprofil zusammen.*
+
+## Weitere Blöcke
+
+Ergänzende Blöcke erweitern das System um Medien und Stellenangebote.
+
+- Bildslider mit einzeln gepflegten Slides
+- vordefiniertes Bildergrid mit sieben Bildpositionen und WordPress-Lightbox
+- frei befüllbare Karten für offene Stellen
+- Fokus-Button, der auf aktive Stellenangebote reagiert
+- Team-Hero und gefilterter Team-Loop
 
 ## Technische Grundlage
 
 Das Plugin ist als WordPress-Block-Plugin aufgebaut und verwendet:
 
 - WordPress Block Editor
-- React / JSX
+- React und JSX
 - SCSS
 - Webpack
+- InnerBlocks für verschachtelte Inhaltsstrukturen
 - dynamische Blöcke mit PHP-Rendering
-- globale Styles
+- Custom Post Type, Taxonomie und strukturierte Metadaten für Teamprofile
+- Splide für den Bildslider
 
 Die kompilierten Dateien liegen im Verzeichnis `build/`.
 
@@ -93,14 +106,19 @@ Die kompilierten Dateien liegen im Verzeichnis `build/`.
 
 ```text
 ud-betreuungsparadies-blocks/
+├── assets/
 ├── build/
 ├── includes/
+│   ├── default-terms/
+│   ├── meta/
+│   ├── post-types/
+│   ├── taxonomies/
 │   ├── block-register.php
 │   ├── enqueue.php
-│   ├── helpers.php
-│   └── render.php
+│   └── helpers.php
 ├── src/
 │   ├── blocks/
+│   ├── block-styles/
 │   ├── css/
 │   ├── js/
 │   └── utils/
@@ -135,24 +153,17 @@ npm run build
 
 Die Styles sind in globale und blockbezogene SCSS-Dateien aufgeteilt.
 
-Frontend-Styles gehören in die jeweiligen `frontend.scss`-Dateien.
-
-Editor-Styles gehören nur dann in `editor.scss`, wenn sie ausschliesslich für die Darstellung im Editor benötigt werden.
-
-Styles aus `frontend.scss` dürfen in `editor.scss` nicht nochmals dupliziert werden.
+Frontend-Styles liegen in den jeweiligen `frontend.scss`-Dateien. `editor.scss` ergänzt ausschliesslich die Darstellung im Editor. Gemeinsame Werte und Gestaltungsvorgaben werden zentral im Plugin geführt.
 
 ## Dynamische Blöcke
 
-Einige Blöcke werden serverseitig gerendert. Die Ausgabe erfolgt über PHP-Dateien im Plugin.
+PHP rendert diejenigen Blöcke, deren Ausgabe von aktuellen WordPress-Daten oder einem Sichtbarkeitsstatus abhängt. Dazu gehören insbesondere Team-Übersichten, Inhaltskarten, offene Stellen und die zugehörigen Fokus-Buttons.
 
-Das betrifft insbesondere Blöcke, die Inhalte aus WordPress-Daten wie Custom Post Types, Taxonomien oder Meta-Feldern ausgeben.
+## Einsatzbereich
 
+Das Plugin ist als projektspezifische Lösung für betreuungsparadies.ch konzipiert. Änderungen an Blockstruktur, Styles und Rendering-Logik werden zentral in diesem Plugin gepflegt.
 
-## Hinweise
-
-Das Plugin ist für den Einsatz auf betreuungsparadies.ch entwickelt und nicht als allgemein wiederverwendbares Plugin konzipiert.
-
-Änderungen an Blöcken, Styles oder Rendering-Logik sollten immer im Plugin vorgenommen werden, nicht direkt im Theme.
+Die fachliche Einordnung beschreibt der Beitrag [«Ein modulares Redaktionssystem mit eigenen Gutenberg-Blöcken entwickeln»](https://ulrich.digital/ein-modulares-redaktionssystem-mit-eigenen-gutenberg-bloecken-entwickeln/). Das Projekt [«Struktur, die Freiraum schafft»](https://ulrich.digital/referenzen/modulares-wordpress-system/) zeigt die Bausteine im realisierten Webauftritt.
 
 ## Autor
 
@@ -160,5 +171,5 @@ Das Plugin ist für den Einsatz auf betreuungsparadies.ch entwickelt und nicht a
 
 ## Lizenz
 
-GPL v2 or later
+GPL v2 or later  
 [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
