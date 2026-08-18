@@ -119,10 +119,7 @@ ud-betreuungsparadies-blocks/
 ├── src/
 │   ├── blocks/
 │   ├── block-styles/
-│   ├── css/
-│   ├── js/
 │   └── utils/
-├── block.json
 ├── package.json
 ├── package-lock.json
 ├── webpack.config.js
