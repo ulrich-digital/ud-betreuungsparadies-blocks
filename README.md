@@ -160,7 +160,12 @@ PHP rendert diejenigen Blöcke, deren Ausgabe von aktuellen WordPress-Daten oder
 
 Das Plugin ist als projektspezifische Lösung für betreuungsparadies.ch konzipiert. Änderungen an Blockstruktur, Styles und Rendering-Logik werden zentral in diesem Plugin gepflegt.
 
-Die fachliche Einordnung beschreibt der Beitrag [«Ein modulares Redaktionssystem mit eigenen Gutenberg-Blöcken entwickeln»](https://ulrich.digital/ein-modulares-redaktionssystem-mit-eigenen-gutenberg-bloecken-entwickeln/). Das Projekt [«Struktur, die Freiraum schafft»](https://ulrich.digital/referenzen/modulares-wordpress-system/) zeigt die Bausteine im realisierten Webauftritt.
+## Einblicke in die Umsetzung
+
+Der Beitrag gibt Einblick in die entwickelte Lösung und ihre Funktionsweise. Das Projekt zeigt den konkreten Einsatz.
+
+- **Mehr zur Lösung:** [Ein modulares Redaktionssystem mit eigenen Gutenberg-Blöcken entwickeln](https://ulrich.digital/ein-modulares-redaktionssystem-mit-eigenen-gutenberg-bloecken-entwickeln/)
+- **Einblick ins Projekt:** [Struktur, die Freiraum schafft](https://ulrich.digital/referenzen/modulares-wordpress-system/)
 
 ## Autor
 
@@ -168,5 +173,8 @@ Die fachliche Einordnung beschreibt der Beitrag [«Ein modulares Redaktionssyste
 
 ## Lizenz
 
-GPL v2 or later  
-[https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+Dieses Projekt steht unter der [ulrich.digital Nutzungslizenz 1.0](LICENSE).
+
+Die unveränderte Software darf in eigenen und kommerziellen Projekten eingesetzt werden. Auf jeder öffentlich erreichbaren Website oder Anwendung muss [ulrich.digital gmbh](https://ulrich.digital) im Impressum, in einem Credits-Bereich oder auf einer vergleichbaren Informationsseite genannt werden. Verkauf, eigenständige Weitergabe, Unterlizenzierung und Änderungen bedürfen der vorherigen schriftlichen Zustimmung von ulrich.digital gmbh.
+
+Komponenten Dritter behalten ihre jeweiligen Lizenz- und Nutzungsbedingungen.
